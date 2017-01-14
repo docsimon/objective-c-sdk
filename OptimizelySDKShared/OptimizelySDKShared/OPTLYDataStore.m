@@ -236,6 +236,7 @@ dispatch_queue_t eventsStorageQueue()
         eventType:(OPTLYDataStoreEventType)eventType
             error:(NSError * _Nullable * _Nullable)error
 {
+    NSLog(@"alda test: saving event.");
     return;
     [self saveEvent:data eventType:eventType error:error completion:nil];
 }
@@ -326,7 +327,8 @@ dispatch_queue_t eventsStorageQueue()
           eventType:(OPTLYDataStoreEventType)eventType
               error:(NSError * _Nullable * _Nullable)error
 {
-    return; 
+    NSLog(@"alda test: Not removing event.");
+    return;
     NSString *eventTypeName = [OPTLYDataStore stringForDataEventEnum:eventType];
     [self.eventDataStore removeEvent:event eventType:eventTypeName error:error];
     
